@@ -1,0 +1,31 @@
+#!/bin/bash
+##################################################
+# File     : functions
+# Purpose  : Cross compile variables
+##################################################
+# https://public.pengutronix.de/oselas/toolchain
+# https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads
+##################################################
+
+LOCAL_PATH=`pwd`
+
+CC_DATE=10-2020-q4-major
+export CC_PATH=/opt/gcc-arm-none-eabi-${CC_DATE}
+export ARCH="arm"
+export HOST="arm-none-eabi"
+export LOCALINSTALL="${LOCAL_PATH}/_install"
+export PREFIX=${LOCALINSTALL}
+export PATH="${CC_PATH}/bin:$PATH"
+export CROSS_COMPILE="${CC_PATH}"
+export CC="${CROSS_COMPILE}/bin/${HOST}-gcc"
+export CXX="${CROSS_COMPILE}/bin/${HOST}-g++"
+export CPP="${CROSS_COMPILE}/bin/${HOST}-cpp"
+export AR="${CROSS_COMPILE}/${HOST}/bin/ar"
+export RANLIB="${CROSS_COMPILE}/${HOST}/bin/ranlib"
+export STRIP="${CROSS_COMPILE}/${HOST}/bin/strip"
+export CFLAGS="-D${ARCH}  -I/${CC_PATH}/${HOST}/include -I${LOCALINSTALL}/include -I${LOCALINSTALL}/usr/include -Wl,-rpath,${LOCALINSTALL}/usr/lib"
+export CXXFLAGS="-D${ARCH} -I/${CC_PATH}/${HOST}/include -I${LOCALINSTALL}/include -I${LOCALINSTALL}/usr/include -Wl,-rpath,${LOCALINSTALL}/usr/lib"
+export LDFLAGS="--specs=nosys.specs -L${LOCALINSTALL}/lib -L${LOCALINSTALL}/usr/lib -L${CC_PATH}/lib -L${CC_PATH}/${HOST}/lib "
+export OPTIM="-O2"
+
+

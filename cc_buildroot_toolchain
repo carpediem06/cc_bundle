@@ -1,0 +1,32 @@
+#!/bin/bash
+#################################################################
+# File     : functions
+# Purpose  : Cross compile variables
+#################################################################
+# https://toolchains.bootlin.com/downloads/releases/toolchains
+#################################################################
+
+LOCAL_PATH=`pwd`
+BUILDROOT_DATE=-2020.08-1
+BUILDROOT_PATH=/opt/powerpc-e500mc--glibc--stable${BUILDROOT_DATE}
+export AUTODIR=autoconf
+export ARCH="powerpc"
+export HOST="powerpc-buildroot-linux-gnu"
+export LOCALINSTALL="${LOCAL_PATH}/_install"
+export PREFIX=${LOCALINSTALL}
+export PATH="${BUILDROOT_PATH}/bin:$PATH"
+export CROSS_COMPILE="${BUILDROOT_PATH}/bin/${HOST}-"
+export CC="${CROSS_COMPILE}gcc"
+export CXX="${CROSS_COMPILE}g++"
+export CPP="${CROSS_COMPILE}cpp"
+export AR="${CROSS_COMPILE}ar"
+export RANLIB="${CROSS_COMPILE}ranlib"
+export STRIP="${CROSS_COMPILE}strip"
+export CFLAGS="-D${ARCH} -Wa,-me500 -mno-string -mhard-float -I${LOCALINSTALL}/include -I/${BUILDROOT_PATH}/${HOST}/include -I${LOCALINSTALL}/usr/include -Wl,-rpath,${LOCALINSTALL}/usr/lib"
+export CXXFLAGS="-D${ARCH} -Wa,-me500 -mno-string -mhard-float -I${LOCALINSTALL}/include -I/${BUILDROOT_PATH}/${HOST}/include -I${LOCALINSTALL}/usr/include -Wl,-rpath,${LOCALINSTALL}/usr/lib"
+export LDFLAGS="-L${LOCALINSTALL}/lib -L${LOCALINSTALL}/usr/lib -L${BUILDROOT_PATH}/${HOST}/sysroot/lib"
+export CC_PATH="${BUILDROOT_PATH}/"
+export CC_LIB="${BUILDROOT_PATH}/${HOST}/sysroot"
+export OPTIM="-O2"
+
+
