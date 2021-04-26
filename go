@@ -99,34 +99,73 @@ function CheckCmd {
     fi
 }
 
+LIST_DOC="AUTHORS \
+	COPYING \
+	INSTALL \
+	NEWS \
+	README"
+
 if [[ $1 == "clean" ]]; then
  echo -e "${G_COLOR}Cleaning...${NO_COLOR}"
 
  DoRecursively "clean" `pwd`
  find . -iwholename '*cmake*' -not -name CMakeLists.txt -delete
- rm -rf autom4te.cache \
-   	m4
- rm -f AUTHORS \
-      COPYING \
-      INSTALL \
-      NEWS \
-      README \
-      mkinstalldirs \
-      configure \
-      autogen.sh \
-      Makefile \
-      Makefile.in \
-      config.h.in* \
+
+LIST_IN="autogen.sh \
+        Makefile.in \
+        ChangeLog \
+        aminclude_static.am"
+
+LIST_AUTOGEN="Makefile \
+      config.h.in~ \
+      stamp-h1 \
       depcomp \
       missing \
-      ChangeLog \
+      mkinstalldirs \
+      configure \
       ltmain.sh \
       install-sh \
       aclocal.m4 \
       compile \
-      config.* \
-      aminclude_static.am
+      config.*"
+
+LIST_DIR="autom4te.cache \
+      m4"
       
+ find . -name configure.ac
+ #--
+ for dir in ${LIST_DIR}; do
+   rm -rf $dir
+ done
+ #--
+ for item in ${LIST_AUTOGEN}; do
+   rm -f $item
+ done
+ #--
+ for item in ${LIST_IN}; do
+   rm -f $item
+ done
+ #--
+  for item in ${LIST_DOC}; do
+   rm -f $item
+ done
+  #--
+  for item in ./tools/*
+  do
+    if [[ -d "$item" ]]; then
+	echo -e "${G_COLOR}Clean ${item}${NO_COLOR}"
+	cd ${item}
+	test -f Makefile && make clean && make distclean
+	 for element in ${LIST_AUTOGEN}; do
+	  rm -f $element
+         done
+         if [[ ${item} == "./tools/CUnit" ]]; then
+          rm -f Jamrules CUnit.spec cunit.pc
+         fi
+	cd ../..
+    fi
+  done
+  #--
 else
 
  echo -e "${G_COLOR}Compiling...${NO_COLOR}"
@@ -153,7 +192,22 @@ else
   ./autogen.sh --host=${HOST}; CheckCmd
   ./configure --prefix=${PREFIX}/usr --host=${HOST} --build=${BUILD}; CheckCmd
   make ${MKOPT}; CheckCmd
-  
+  #--
+  for item in ./tools/*
+  do
+    if [[ -d "$item" ]]; then
+	echo -e "${G_COLOR}Compile ${item}${NO_COLOR}"
+	cd ${item}
+	 if [[ -f configure.ac || -f configure.in ]]; then
+	 autoreconf -f -i; CheckCmd
+	 ./autogen.sh --host=${HOST}; CheckCmd
+	 ./configure --prefix=${PREFIX}/usr --host=${HOST} --build=${BUILD}; CheckCmd
+	 make ${MKOPT}; CheckCmd
+        fi
+	cd ../..
+    fi
+  done
+  #--
 fi
 
 

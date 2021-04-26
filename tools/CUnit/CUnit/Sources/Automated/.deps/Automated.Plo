@@ -1,0 +1,99 @@
+Automated.lo: Automated.c \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/stdio.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/_ansi.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/newlib.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/_newlib_version.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/config.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/ieeefp.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/features.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/cdefs.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/_default_types.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/lib/gcc/arm-none-eabi/10.2.1/include/stddef.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/lib/gcc/arm-none-eabi/10.2.1/include/stdarg.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/reent.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/_ansi.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/_types.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/_types.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/lock.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/types.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/_stdint.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/_pthreadtypes.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/types.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/stdio.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/stdlib.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/stdlib.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/ctype.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/assert.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/string.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/string.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/lib/gcc/arm-none-eabi/10.2.1/include-fixed/limits.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/lib/gcc/arm-none-eabi/10.2.1/include-fixed/syslimits.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/limits.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/syslimits.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/time.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/time.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/timespec.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/_timespec.h \
+ ../../../CUnit/Headers/CUnit.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/math.h \
+ ../../../CUnit/Headers/CUError.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/errno.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/errno.h \
+ ../../../CUnit/Headers/CUnit.h ../../../CUnit/Headers/TestDB.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/setjmp.h \
+ /opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/setjmp.h \
+ ../../../CUnit/Headers/TestRun.h ../../../CUnit/Headers/TestDB.h \
+ ../../../CUnit/Headers/MyMem.h ../../../CUnit/Headers/Util.h \
+ ../../../CUnit/Headers/TestRun.h ../../../CUnit/Headers/Automated.h \
+ ../../../CUnit/Headers/CUnit_intl.h
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/stdio.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/_ansi.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/newlib.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/_newlib_version.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/config.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/ieeefp.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/features.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/cdefs.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/_default_types.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/lib/gcc/arm-none-eabi/10.2.1/include/stddef.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/lib/gcc/arm-none-eabi/10.2.1/include/stdarg.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/reent.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/_ansi.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/_types.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/_types.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/lock.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/types.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/_stdint.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/_pthreadtypes.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/types.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/stdio.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/stdlib.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/stdlib.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/ctype.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/assert.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/string.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/string.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/lib/gcc/arm-none-eabi/10.2.1/include-fixed/limits.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/lib/gcc/arm-none-eabi/10.2.1/include-fixed/syslimits.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/limits.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/syslimits.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/time.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/time.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/timespec.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/_timespec.h:
+../../../CUnit/Headers/CUnit.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/math.h:
+../../../CUnit/Headers/CUError.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/errno.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/sys/errno.h:
+../../../CUnit/Headers/CUnit.h:
+../../../CUnit/Headers/TestDB.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/setjmp.h:
+/opt/gcc-arm-none-eabi-10-2020-q4-major/arm-none-eabi/include/machine/setjmp.h:
+../../../CUnit/Headers/TestRun.h:
+../../../CUnit/Headers/TestDB.h:
+../../../CUnit/Headers/MyMem.h:
+../../../CUnit/Headers/Util.h:
+../../../CUnit/Headers/TestRun.h:
+../../../CUnit/Headers/Automated.h:
+../../../CUnit/Headers/CUnit_intl.h:
